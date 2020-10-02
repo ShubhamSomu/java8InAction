@@ -1,4 +1,4 @@
-package com.binarybeasts.java8inaction.c1_Lambdas;
+package com.binarybeasts.java8inaction.ch3_Lambdas;
 
 import com.binarybeasts.java8inaction.data.dao.Transaction;
 import com.binarybeasts.java8inaction.data.service.TransactionService;
