@@ -8,11 +8,6 @@ import java.util.function.IntPredicate;
 import java.util.stream.IntStream;
 
 public class AnIntPredicate {
-    private final TransactionService transactionService;
-    public AnIntPredicate(){
-        this.transactionService = Objects.requireNonNull(TransactionConfig.getTransactionService(),
-                "transactionService");
-    }
 
     public static void main(String[] args) {
         AnIntPredicate anIntPredicate = new AnIntPredicate();
