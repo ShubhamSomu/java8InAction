@@ -1,18 +1,9 @@
-package com.binarybeasts.java8inaction.ch3_Lambdas;
+package com.binarybeasts.java8inaction.ch3_Lambdas.predicates;
 
-import com.binarybeasts.java8inaction.data.service.TransactionService;
-import com.binarybeasts.java8inaction.data.setup.TransactionConfig;
-
-import java.util.Objects;
 import java.util.function.IntPredicate;
 import java.util.stream.IntStream;
 
 public class AnIntPredicate {
-    private final TransactionService transactionService;
-    public AnIntPredicate(){
-        this.transactionService = Objects.requireNonNull(TransactionConfig.getTransactionService(),
-                "transactionService");
-    }
 
     public static void main(String[] args) {
         AnIntPredicate anIntPredicate = new AnIntPredicate();
@@ -53,10 +44,4 @@ public class AnIntPredicate {
         IntPredicate isDivisible = index -> i % index == 0;
         return i > 1 && IntStream.range(2, i).noneMatch(isDivisible);
     }
-
-    public static boolean isTester(int i){
-        IntPredicate isDivisible = index -> i % index == 0;
-        return i > 1 && IntStream.range(2, i).noneMatch(isDivisible);
-    }
-
 }
