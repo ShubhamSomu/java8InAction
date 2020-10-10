@@ -1,16 +1,16 @@
 package com.binarybeasts.java8inaction.data.setup;
 
-import com.binarybeasts.java8inaction.data.repository.TranscationRepository;
-import com.binarybeasts.java8inaction.data.service.TransactionService;
+import com.binarybeasts.java8inaction.data.repository.AllInOneRepository;
+import com.binarybeasts.java8inaction.data.service.AllInOneService;
 
 public class TransactionConfig {
     public TransactionConfig(){
 
     }
 
-    public static TransactionService getTransactionService(){
-        TranscationRepository transcationRepository = new TranscationRepository();
-        return new TransactionService(transcationRepository);
+    public static AllInOneService getTransactionService(){
+        AllInOneRepository allInOneRepository = new AllInOneRepository();
+        return new AllInOneService(allInOneRepository);
     }
 
 
